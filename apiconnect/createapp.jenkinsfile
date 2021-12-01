@@ -1,13 +1,12 @@
 pipeline {
-    agent { dockerfile true }
+    agent { dockerfile { dir 'apiconnect' } }
     stages {
         stage('Test') {
-            dir('/apiconnect/'){
-                steps {
-                    sh 'node --version'
-                    sh 'svn --version'
-                }
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
             }
+          
         }
     }
 }
