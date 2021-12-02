@@ -1,4 +1,4 @@
-FROM pull node:16.13.1-alpine
+FROM node:16.13.1-alpine
 
 # Install python/pip
 ENV PYTHONUNBUFFERED=1
