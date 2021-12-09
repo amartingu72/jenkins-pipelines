@@ -1,5 +1,7 @@
 pipeline {
-    agent { image 'apiconnect-agent:latest' }
+    agent { 
+        docker { image 'apiconnect-agent:latest' }
+    }
     stages {
         stage('Test') {
             steps {
