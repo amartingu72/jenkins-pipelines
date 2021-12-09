@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-        docker { image 'apiconnect-agent:latest' }
+        docker { image 'alberto1972/apiconnect-agent:latest' }
     }
     stages {
         stage('Test') {
