@@ -1,11 +1,14 @@
 pipeline {
     agent { 
-        docker { image 'alberto1972/apiconnect-agent:latest' }
+        docker { 
+            image 'alberto1972/apiconnect-agent:latest' 
+            reuseNode true
+        }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'apic login -sso'
             }
           
         }
